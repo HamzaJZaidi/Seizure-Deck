@@ -60,6 +60,7 @@ dependencies:
   flutter_phone_direct_caller: ^2.1.1
   geolocator: ^10.1.0
   direct_sms: ^0.0.1
+  url_launcher: ^6.3.0
 
 dev_dependencies:
   flutter_test:

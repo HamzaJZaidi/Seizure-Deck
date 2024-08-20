@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:seizure_deck/globals.dart' as globals;
+import 'package:seizure_deck/screens/home_screen/ambulance_services.dart';
 import 'package:seizure_deck/screens/home_screen/community.dart';
 import 'package:seizure_deck/screens/home_screen/exercise.dart';
 import 'package:seizure_deck/screens/home_screen/medication.dart';
 import 'package:seizure_deck/screens/home_screen/noise_checker.dart';
 import 'package:seizure_deck/screens/home_screen/seizureList.dart';
 import 'package:seizure_deck/screens/home_screen/video_page.dart';
+import 'package:seizure_deck/screens/home_screen/water_reminder.dart';
 import 'package:seizure_deck/screens/loginscreen/login_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -21,7 +23,7 @@ class Dashboard extends StatelessWidget {
     "First Aid \nInstructions",
     "Water Reminder",
     "Noise Checker",
-    "Ambulance"
+    "Ambulance Services"
   ];
 
 
@@ -164,6 +166,22 @@ class Dashboard extends StatelessWidget {
                           context,
                           MaterialPageRoute(
                             builder: (context) => SeizureList(),
+                          ),
+                        );
+                      }
+                      if (dashboardlists[index] == 'Ambulance Services') {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => AmbulanceServicesScreen(),
+                          ),
+                        );
+                      }
+                      if (dashboardlists[index] == 'Water Reminder') {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => WaterReminderScreen(),
                           ),
                         );
                       }
